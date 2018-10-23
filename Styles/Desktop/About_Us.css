@@ -1,0 +1,383 @@
+/*
+	Copyright Oliver Perry 22/11/2013
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Main desktop css */
+
+@font-face{
+	font-family: YSSFont;
+	src: url("../../Fonts/GrinchedRegular.eot?#iefix") format("embedded-opentype"),
+	     url("../../Fonts/GrinchedRegular.woff") format("woff"),
+	     url("../../Fonts/GrinchedRegular.ttf") format("truetype"),
+	     url("../../Fonts/GrinchedRegular.svg#webfont") format("svg");
+}
+
+html {
+	background: linear-gradient(#00001f, #615acb, #00001f) fixed;
+}
+
+body {
+	font-family:YSSFont;
+	color: #fff;
+	position: relative;
+	margin: 0 auto;
+	width: 1080px;
+	height: auto;
+	overflow-x: hidden;
+}
+
+#bodyShadow {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	background-color: #080A1B;
+	opacity: 0.2;
+}
+
+#topLines {
+	position: absolute;
+	background: url("../../Images/YSS_webasset_artsy_lines_top.png") no-repeat center top;
+	top: -190px;
+	right: 330px;
+	width: 1500px;
+    height: 700px;
+	background-size: contain;
+}
+
+#pageHeader {
+	position: relative;
+	margin: 0 auto;
+	width: 940px;
+	height: 260px;
+}
+
+#logo {
+	position: absolute;
+	background-size: contain;
+}
+
+#links {
+	position: absolute;
+	right: 0;
+	width: 700px;
+	height: 100%;
+}
+
+#quote {
+	position: absolute;
+	width: 600px;
+	height: 50px;
+	right: 0;
+	bottom: 70px;
+	background: url("../../Images/YSS_webasset_yell_bar.png") no-repeat right top;
+	background-size: 600px, 50px;
+}
+
+#quote p {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 30px;
+}
+
+#navigation {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#navLinks {
+	list-style-type: none;
+}
+
+#navLinks li {
+	float:left;
+    height: 50px;
+}
+
+#navLinks .deactivePageNav{
+	background: url("../../Images/YSS_webasset_nav_buttons_blank.png") no-repeat;
+}
+
+#activePageNav{
+	background: url("../../Images/YSS_webasset_nav_buttons_blank_current_page.png") no-repeat;
+}
+
+#navLinks li a {
+	float:right;
+	width: 152px;
+	margin-top: 13px;
+    text-align: center;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+#activePageNav a:link{
+	color: black;
+}
+
+#activePageNav a:visited{
+	color: black;
+}
+
+#navLinks .deactivePageNav a:link {
+	color: white;
+}
+
+#navLinks .deactivePageNav a:visited {
+	color: red;
+}
+
+#navLinks .deactivePageNav a:hover {
+	color: yellow;
+}
+
+#navLinks .deactivePageNav a:active {
+	color: orange;
+}
+
+#socialMediaSide {
+	position: fixed;
+	top: 300px;
+	right: 0;
+	width: 92px;
+	height: 300px;
+	background: url("../../Images/YSS_webasset_yell_bar_rotated.png") no-repeat;
+	background-size: contain;
+}
+
+#socialLinksSide {
+	list-style-type: none;
+	padding-top: 67px;
+	padding-left: 33px;
+}
+
+#socialLinksSide li {
+	padding-bottom: 10px;
+}
+
+#socialLinksSide li a {
+}
+
+#mainSection {
+	width: 100%;
+	height: 3000px;
+}
+
+#queToScroll {
+}
+
+#queToScroll p {
+	position: absolute;
+	top: 800px;
+	left: 40%;
+	font-size: 30px;
+	text-decoration: none;
+}
+
+.leftSlider {
+	position: absolute;
+	width: 1600px;
+	height: 300px;
+	right: 1000px;
+	background: url("../../Images/YSS_webasset_slider_left.png") no-repeat;
+	background-size: contain;
+}
+
+.rightSlider {
+	position: absolute;
+	width: 1600px;
+	height: 300px;
+	left: 1000px;
+	background: url("../../Images/YSS_webasset_slider_right.png") no-repeat;
+	background-size: contain;
+}
+
+#quoteOne {
+	top: 300px;
+}
+
+#quoteOne #videoPlayer {
+	position: absolute;
+	top: -10px;
+	right: 660px;
+}
+
+#quoteTwo {
+	top: 800px;
+}
+
+#quoteTwo p {
+	margin-top: 60px;
+	margin-left: 40px;
+	text-align: left;
+	font-size: 24px;
+	text-decoration: none;
+	line-height: 125%;
+	word-spacing: 5px;
+	text-shadow: 2px 2px #000;
+}
+
+#quoteTwo #blankPic {
+	position: absolute;
+	width: 750px;
+	height: 450px;
+	left: 626px;
+	top: -45px;
+	background: url("../../Images/YSS_webasset_about_mid_paper_1.png") no-repeat;
+	background-size: contain;
+}
+
+#quoteThree {
+	top: 1300px;
+}
+
+#quoteThree p {
+	margin-top: 90px;
+	margin-left: 295px;
+	text-align: left;
+	font-size: 24px;
+	text-decoration: none;
+	line-height: 125%;
+	word-spacing: 5px;
+	transform:rotate(2deg);
+	-ms-transform:rotate(2deg);
+	-webkit-transform:rotate(2deg);
+	text-shadow: 2px 2px #000;
+}
+
+#quoteThree #mikePic {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	right: 440px;
+	top: -45px;
+	background: url("../../Images/YSS_webasset_about_mike_paper_1.png") no-repeat;
+	background-size: contain;
+}
+
+#quoteFour {
+	top: 1800px;
+}
+
+#quoteFour p {
+	margin-top: 80px;
+	margin-left: 320px;
+	text-align: left;
+	font-size: 24px;
+	text-decoration: none;
+	line-height: 125%;
+	word-spacing: 5px;
+	transform:rotate(-3deg);
+	-ms-transform:rotate(-3deg);
+	-webkit-transform:rotate(-3deg);
+	text-shadow: 2px 2px #000;
+}
+
+#quoteFour #robPic {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	left: 500px;
+	top: -45px;
+	background: url("../../Images/YSS_webasset_about_rob_paper_1.png") no-repeat;
+	background-size: contain;
+}
+
+#quoteFive {
+	top: 2300px;
+}
+
+#quoteFive p {
+	margin-top: 80px;
+	margin-left: 320px;
+	text-align: left;
+	font-size: 24px;
+	text-decoration: none;
+	line-height: 125%;
+	word-spacing: 5px;
+	text-shadow: 2px 2px #000;
+}
+
+#quoteFive #ollyPic {
+	position: absolute;
+	width: 800px;
+	height: 500px;
+	right: 500px;
+	top: -45px;
+	background: url("../../Images/YSS_webasset_about_olly_paper_1.png") no-repeat;
+	background-size: contain;
+}
+
+#legalAndLinks {
+	top: 2800px;
+}
+
+#legalAndLinks p {
+	margin-top: 130px;
+	margin-left: 340px;
+	text-align: center;
+	font-size: 30px;
+	text-decoration: none;
+	line-height: 130%;
+}
+
+#bottomLines {
+	position: absolute;
+	background: url("../../Images/YSS_webasset_artsy_lines_bottom.png") no-repeat;
+	bottom: 0;
+	left: 55px;
+	width: 1500px;
+    height: 500px;
+	background-size: 1500px, 700px;
+	overflow-y: hidden;
+}
